@@ -93,6 +93,7 @@ let c1 = 0;
 let c2 = 0;
 let c3 = 0;
 let c4 = 0;
+let c5 = 0;
 
 PP.addEventListener('click', PlayPause);
 AD.addEventListener('click', AumentarDiminuir);
@@ -104,7 +105,7 @@ Video.addEventListener('mousemove', MostrarC);
 Contro.addEventListener('mousemove', MostrarC);
 Contro.addEventListener('mouseout', Para2);
 range2.addEventListener('input', att);
-
+window.addEventListener('resize', function(){if(c5 == 0){location.reload(); console.log('ExecutedR' + c5)}});
 
 function MostrarC(v)
 {
@@ -234,7 +235,7 @@ function AumentarDiminuir()
 {
     if(c1 == 0)
     {
-        Re = '';
+        c5 = 1;
         if(window.innerWidth < 800)
         {
             Contro.style.objectFit = 'contain';
@@ -285,7 +286,6 @@ function AumentarDiminuir()
     }
     else
     {
-        Re = window.addEventListener('resize', function(){location.reload()});
         if(window.innerWidth > 800)
         {
             Contro.style.objectFit = 'initial';
@@ -303,6 +303,7 @@ function AumentarDiminuir()
             document.getElementById('Audio3').style.top = '86.1%';
             document.getElementById('Volume').style.top = '89.45%';
 
+            c5 = 0;
             document.exitFullscreen();
         }
         else
@@ -341,7 +342,8 @@ function AumentarDiminuir()
                 document.getElementById('Audio3').style.top = '87.1%';
                 document.getElementById('Volume').style.top = '90.5%';
             }
-
+    
+            c5 = 0;
             document.exitFullscreen();
         }
         c1 = 0;
