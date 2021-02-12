@@ -128,6 +128,7 @@ function MostrarC(v)
             PP.style.filter = 'opacity(1)';
             PP.style.visibility = 'visible';
             Au.style.transform = 'translateY(0)';
+            TempoA.style.right = 'calc(' + AD.clientWidth + 'px + ' + '8%)';
             document.getElementById('Box').style.overflow = 'visible';
         }
         else
