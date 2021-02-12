@@ -19,7 +19,6 @@ Video.addEventListener('click', PlayPause);
 
 PP.style.width = '50px';
 
-
 function teste(a)
 {
     if(a.type == 'playing')
@@ -129,6 +128,7 @@ function MostrarC(v)
             PP.style.filter = 'opacity(1)';
             PP.style.visibility = 'visible';
             Au.style.transform = 'translateY(0)';
+            document.getElementById('Box').style.overflow = 'visible';
         }
         else
         {
