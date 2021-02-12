@@ -104,7 +104,6 @@ Video.addEventListener('mousemove', MostrarC);
 Contro.addEventListener('mousemove', MostrarC);
 Contro.addEventListener('mouseout', Para2);
 range2.addEventListener('input', att);
-let Re = window.addEventListener('resize', function(){location.reload()})
 
 
 function MostrarC(v)
@@ -350,6 +349,8 @@ function AumentarDiminuir()
         AD.style.backgroundImage = 'url(Assets/Images/Aumentar.png)';
     }
 }
+
+let Re = window.addEventListener('resize', function(){location.reload()});
 
 function Mutar()
 {
