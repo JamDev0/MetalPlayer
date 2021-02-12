@@ -1,0 +1,297 @@
+*
+{
+    margin: 0;
+}
+
+html
+{
+    background-color: rgb(17, 17, 17);
+}
+
+#Box
+{
+    position: absolute;
+    width: 70%;
+    height: 537px;
+    left: calc(50% - (70%/2));
+}
+
+#Video
+{
+    width: 100%;
+}
+
+#Controles
+{
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    filter: opacity(0);
+    z-index: 3;
+    transition: visibility 0.3s linear, filter 0.3s cubic-bezier(0.4, 0, 1, 1);
+    overflow: hidden;
+}
+
+.Botões
+{
+    position: absolute;
+    top: 100%;
+    transform: translateY(-140%);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    border-radius: 0;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: inline-block;
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 0.2s ease-in-out, top 0.3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+#Duração
+{
+    top: 80%;
+    left: 2.5%;
+    visibility: visible;
+    filter: opacity(1);
+
+    width: 95%;
+    height: 10px;
+    border-radius: 5px;
+    border-width: 2px;
+    background: rgb(75, 75, 75);
+    cursor: pointer;
+}
+
+#Duração::-webkit-slider-thumb {
+    width: 25px;
+    height: 25px;
+    background: rgb(33, 243, 54);
+  }
+
+#TempoA
+{
+    position: absolute;
+    top: 87%;
+    font-family: sans-serif;
+    color: rgb(238, 238, 238);
+    font-size: 40px;
+}
+
+#PlayPause
+{
+    left: 3%;
+    background-image: url('Assets/Images/Play1.png');
+}
+
+#AudioConfig
+{
+    display: inline-block;
+}
+
+#Audio
+{
+    left: calc((5% + 40px) + 1.4%);
+    background-image: url('Assets/Images/AudioR.png');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    z-index: 3;
+}
+
+#Audio1
+{
+    position: absolute;
+    top: 87.5%;
+    left: calc((5% + 40px) + (1.4% + 5px));
+    visibility: hidden;
+    z-index: 2;
+    display: inline-block;
+    height: 34.88px;
+    transition: left 0.2s ease-in-out;
+}
+
+#Audio2
+{
+    position: absolute;
+    top: 86.8%;
+    left: calc((5% + 40px) + (1.4% + 10px));
+    visibility: hidden;
+    display: inline-block;
+    height: 41.712px;
+    transition: left 0.2s ease-in-out;
+}
+
+#Audio3
+{
+    position: absolute;
+    top: 86.1%;
+    left: calc((5% + 40px) + (15px + 1.4%));
+    visibility: hidden;
+    display: inline-block;
+    height: 48.92px;
+    transition: left 0.2s ease-in-out;
+}
+
+.slider
+{
+    position: absolute;
+    top: 89.45%;
+    left: calc((3% + 40px) + (62px + 1.4%) + 42px);
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    border-radius: 8px;
+    border-color: black;
+    border-width: 3px;
+    border-style: ridge;
+    background: #ffffff;
+    outline: none;
+    visibility: hidden;
+    filter: opacity(0);
+    transition: visibility 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background: transparent;
+    background-image: url('Assets/Images/Bolinha.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+#AumentarDiminuir
+{
+    right: 3%;
+    background-image: url('Assets/Images/Aumentar.png');
+}
+
+@media only screen and (max-width: 800px)
+{
+#Box
+{
+    width: 100%;
+    height: auto;
+    left: 0;
+}
+
+#PlayPause
+{
+    left: 3%;
+    background-image: url('Assets/Images/Play1.png');
+    transition: top 0s ease-in-out, filter 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+}
+
+#Controles
+{
+    overflow: visible;
+}
+
+.Botões
+{
+    width: 35px;
+    height: 35px;
+    top: 86.4%;
+    transform: translateY(0);
+}
+
+#Duração
+{
+    top: 80%;
+}
+
+#TempoA
+{
+    top: 84.8%;
+}
+
+#Audio
+{
+    top: 86.5%;
+    left: 5%;
+}
+
+#Audio1
+{
+    top: 88.5%;
+    left: 5%;
+    height: 22.2px;
+    transition: left 0.2s ease-in-out;
+}
+
+#Audio2
+{
+    top: 87.8%;
+    left: 4.9%;
+    height: 26.5px;
+    transition: left 0.2s ease-in-out;
+}
+
+#Audio3
+{
+    top: 87.1%;
+    left: 4.8%;
+    height: 31.1px;
+    transition: left 0.2s ease-in-out;
+}
+}
+
+@media only screen and (max-width: 500px)
+{
+.Botões
+{
+    top: 82.5%;
+}
+    
+#Duração
+{
+    top: 73%;
+}
+
+#Audio
+{
+    top: 82%;
+    left: 5%;
+}
+
+#Audio1
+{
+    top: 84.5%;
+    left: 5%;
+    height: 22.2px;
+    transition: left 0.2s ease-in-out;
+}
+
+#Audio2
+{
+    top: 83.5%;
+    left: 4.9%;
+    height: 26.5px;
+    transition: left 0.2s ease-in-out;
+}
+
+#Audio3
+{
+    top: 82.8%;
+    left: 4.9%;
+    height: 26.5px;
+    transition: left 0.2s ease-in-out;
+}
+
+#TempoA
+{
+    font-size: 20px;
+}
+}
