@@ -104,7 +104,8 @@ Video.addEventListener('mousemove', MostrarC);
 Contro.addEventListener('mousemove', MostrarC);
 Contro.addEventListener('mouseout', Para2);
 range2.addEventListener('input', att);
-window.addEventListener('resize', function(){location.reload()})
+let Re = window.addEventListener('resize', function(){location.reload()})
+
 
 function MostrarC(v)
 {
@@ -234,6 +235,7 @@ function AumentarDiminuir()
 {
     if(c1 == 0)
     {
+        Re = '';
         if(window.innerWidth < 800)
         {
             Contro.style.objectFit = 'contain';
@@ -284,6 +286,7 @@ function AumentarDiminuir()
     }
     else
     {
+        Re = window.addEventListener('resize', function(){location.reload()});
         if(window.innerWidth > 800)
         {
             Contro.style.objectFit = 'initial';
